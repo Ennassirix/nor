@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost';
+}
+:root {
+    --p-color: #001F3F;
+    --s-color: #FFD700;
+    --text-p-color: #FFFFFF;
+    --text-s-color: #e74c3c;
+    --d-p-color: #3498db;
+    --d-s-color: #2ecc71;
+    --d-text-p-color: #e74c3c;
+    --d-text-s-color: #e74c3c;
+  }
+.header{
+    height: 10vh;
+    padding: 15px 10vw;
+    display: grid;
+    grid-template-columns: 15vw auto 15vw;
+    column-gap: 50px;
+    align-items: center;
+    background-color: var(--p-color);
+    color: var(--text-p-color);
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;    
+}
+.navbar ul li {
+    position: relative;
+    cursor: pointer;
+}
+.navbar a{
+    text-decoration: none;
+    color: var(--text-p-color);
+}
+.navbar ul li::before{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--s-color);
+    transition: all 0.5s;
+}
+.navbar ul li:hover::before{
+    width: 100%;
+}
+.profil{
+    display: grid;
+    column-gap: 30px;
+    grid-template-columns:  auto auto;
+}
+.profil button{
+    font-size: 15px;
+    font-weight: 500;
+    height: 30px;
+    background-color: var(--s-color);
+    color: var(--p-color);
+    border-radius: 5px;
+    border: 1px solid var(--p-color);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.profil button:hover{
+    transform: scale(1.05);
+}
+.logo{
+    text-align: center;
+}
