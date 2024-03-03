@@ -7,10 +7,12 @@ import Home from './pages/Home'
 import GiftCards from './pages/GiftCards'
 import Accounts from './pages/Accounts'
 import SerialKeys from './pages/SerialKeys'
+import { Provider } from 'react-redux';
+import store from './Redux/store';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    
+    <Provider store={store}>
     <BrowserRouter>
     <Header/>
       <Routes>
@@ -20,6 +22,7 @@ root.render(
         <Route path='/serialkeys' element={<SerialKeys/>}/>
       </Routes>
     </BrowserRouter>
+    </Provider>
   </React.StrictMode>
 );
 
